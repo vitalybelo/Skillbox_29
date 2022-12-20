@@ -8,6 +8,7 @@ add_executable(Skillbox_29
         Counting.cpp
         Dog.cpp
         solution_1.cpp
+        Shape.cpp
 
         )
 
