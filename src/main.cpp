@@ -2,6 +2,7 @@
 #include "Shape.h"
 #include "Circle.h"
 #include "Rectangle.h"
+#include "Triangle.h"
 using namespace std;
 
 int main() {
@@ -16,11 +17,14 @@ int main() {
     //solution_1();
 
     cout << endl;
-    Circle circle(10);
+    Circle circle(7);
     Circle::printShape(&circle);
 
-    Rectangle rectangle(12,15);
+    Rectangle rectangle(4,6);
     Shape::printShape(&rectangle);
+
+    Triangle triangle(3,4,5);
+    Triangle::printShape(&triangle);
 
     return 0;
 }
