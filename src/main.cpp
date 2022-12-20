@@ -1,9 +1,4 @@
 #include "solutions.h"
-#include "Shape.h"
-#include "Circle.h"
-#include "Rectangle.h"
-#include "Triangle.h"
-using namespace std;
 
 int main() {
 
@@ -14,17 +9,15 @@ int main() {
      * в следующей версии добавим: стрижка ногтей, рукоделие, чтение, игра на балалайке
      * Ф.Ф.Персиков-Преображенский...
      */
-    //solution_1();
+    solution_1();
 
-    cout << endl;
-    Circle circle(7);
-    Circle::printShape(&circle);
-
-    Rectangle rectangle(4,6);
-    Shape::printShape(&rectangle);
-
-    Triangle triangle(3,4,5);
-    Triangle::printShape(&triangle);
+    /**
+     * реализован абстрактный класс Shape с 3-мя пустыми виртуальными методами и одним статическим
+     * На основе класса Shape реализованы классы Circle, Rectangle, Triangle - с методами override
+     * Метод отображения результатов реализован в классе Shape, ему передается указатель на дочерний
+     * объект класса Shape.
+     */
+    solution_2();
 
     return 0;
 }

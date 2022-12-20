@@ -12,9 +12,9 @@ void solution_1() {
 
     Dog dog("Wolfy");
 
-    cout << endl;
+    cout << "\n\n************* SOLUTION 1 **************\n\n";
     dog.addAbility(SWIM);
-    dog.addAbility(SWIM);
+    dog.addAbility(SWIM); // защита не добавляет дубликат способности
     dog.addAbility(DANCE);
     dog.showAbilities();
 
