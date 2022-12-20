@@ -2,13 +2,14 @@
 #include <iostream>
 #include "Shape.h"
 
-class Circle : virtual public Shape {
+class Rectangle : public Shape {
 private:
-    double radius = 0;
-    std::string type = "Circle";
+    std::string type = "Rectangle";
+    double width = 0;
+    double height = 0;
 
 public:
-    explicit Circle(double radius);
+    Rectangle(double width, double height);
 
     double square() override;
     BoundBoxDimensions dimension() override;
