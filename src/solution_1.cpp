@@ -1,7 +1,5 @@
-#include "solutions.h"
+#include "Dog.h"
 using namespace std;
-
-int main() {
 
 /**
  * Создаем обычную собаку, с обычным интерфейсом для updates
@@ -10,9 +8,20 @@ int main() {
  * в следующей версии добавим: стрижка ногтей, рукоделие, чтение журналов, игра на балалайке
  * Ф.Ф.Преображенский...
  */
-    solution_1();
+void solution_1() {
 
+    Dog dog("Wolfy");
 
+    cout << endl;
+    dog.addAbility(SWIM);
+    dog.addAbility(SWIM);
+    dog.addAbility(DANCE);
+    dog.showAbilities();
 
-    return 0;
+    cout << endl;
+    dog.clearAbilities();
+    dog.showAbilities();
+
+    cout << endl;
+
 }
