@@ -1,6 +1,6 @@
 #include "Swimming.h"
 #include <iostream>
 
-void Swimming::swimming() {
+void Swimming::show_talent() {
     std::cout << "It can \"SWIM\"" << std::endl;
 }

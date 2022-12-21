@@ -3,6 +3,5 @@
 
 class Dancing : virtual public Talents {
 public:
-    void dancing() override;
-
+    void show_talent() override;
 };

@@ -5,22 +5,20 @@
 #include "Counting.h"
 #include "Dancing.h"
 
-#define TALENT_NUMBERS 3
-enum Ability { SWIM = 0, DANCE, COUNT};
-
 class Dog :
         virtual public Swimming,
         virtual public Counting,
-        virtual public Dancing {
+        virtual public Dancing
+        {
 
 private:
     std::string name = "My pet";
-    std::vector<Ability> abilities;
+    std::vector<Talents*> abilities;
 
 public:
     explicit Dog(const std::string &name);
 
     void clearAbilities();
-    bool addAbility(Ability ability);
-    void showAbilities();
+    bool addAbility(Talents* ability);
+    void show_talent() override;
 };

@@ -8,28 +8,21 @@ void Dog::clearAbilities() {
     if (!abilities.empty()) abilities.clear();
 }
 
-bool Dog::addAbility(Ability ability) {
-    if (ability > TALENT_NUMBERS - 1) return false;
-
-    for (auto & abi : abilities) {
-        if (abi == ability) return false;
+bool Dog::addAbility(Talents* ability) {
+    if (ability != nullptr) {
+        abilities.push_back(ability);
+        return true;
     }
-    abilities.push_back(ability);
-    return true;
+    return false;
 }
 
-void Dog::showAbilities() {
+void Dog::show_talent() {
     std::cout << "This is: " << name << " --> and it has a some talents:\n";
     if (abilities.empty()) {
         std::cout << "SORRY, NO MORE TALENTS";
     } else {
         for (auto &ability: abilities) {
-            switch (ability) {
-                case SWIM: this->swimming(); break;
-                case DANCE: this->dancing(); break;
-                case COUNT: this->counting(); break;
-                default: std::cout << "Ops, exclusion happens";
-            }
+            ability->show_talent();
         }
     }
 }

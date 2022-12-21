@@ -13,14 +13,13 @@ void solution_1() {
     Dog dog("Wolfy");
 
     cout << "\n\n************* SOLUTION 1 **************\n\n";
-    dog.addAbility(SWIM);
-    dog.addAbility(SWIM); // защита не добавляет дубликат способности
-    dog.addAbility(DANCE);
-    dog.showAbilities();
+    dog.addAbility(new Swimming());
+    dog.addAbility(new Dancing());
+    dog.show_talent();
 
     cout << endl;
     dog.clearAbilities();
-    dog.showAbilities();
+    dog.show_talent();
 
     cout << endl;
 

@@ -3,6 +3,5 @@
 
 class Counting : virtual public Talents {
 public:
-    void counting() override;
-
+    void show_talent() override;
 };

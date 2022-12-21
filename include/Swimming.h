@@ -3,6 +3,5 @@
 
 class Swimming : virtual public Talents {
 public:
-    void swimming() override;
-
+    void show_talent() override;
 };
