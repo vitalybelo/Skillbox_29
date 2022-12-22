@@ -14,7 +14,6 @@ public:
     explicit Dog(const std::string &name);
     virtual ~Dog();
 
-
     void clearAbilities();
     bool addAbility(Talents* ability);
     void show_talent();
