@@ -6,7 +6,7 @@ Circle::Circle(double radius) {
 }
 
 double Circle::square() {
-    return M_PI * pow(radius, 2);
+    return 3.14159 * pow(radius, 2);
 }
 
 BoundBoxDimensions Circle::dimension() {

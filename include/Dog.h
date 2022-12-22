@@ -5,12 +5,7 @@
 #include "Counting.h"
 #include "Dancing.h"
 
-class Dog :
-        virtual public Swimming,
-        virtual public Counting,
-        virtual public Dancing
-        {
-
+class Dog {
 private:
     std::string name = "My pet";
     std::vector<Talents*> abilities;
@@ -20,5 +15,5 @@ public:
 
     void clearAbilities();
     bool addAbility(Talents* ability);
-    void show_talent() override;
+    void show_talent();
 };
