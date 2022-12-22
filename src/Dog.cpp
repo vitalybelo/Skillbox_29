@@ -6,6 +6,7 @@ Dog::Dog(const std::string &name) {
 
 void Dog::clearAbilities() {
     if (!abilities.empty()) abilities.clear();
+    if (abilities.capacity() > 0) abilities.shrink_to_fit();
 }
 
 bool Dog::addAbility(Talents* ability) {
@@ -25,6 +26,11 @@ void Dog::show_talent() {
             ability->show_talent();
         }
     }
+}
+
+Dog::~Dog() {
+    // заменяем содержимое вектора на пустой вектор - обнулили
+    std::vector<Talents*>().swap(abilities);
 }
 
 

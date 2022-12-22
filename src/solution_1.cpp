@@ -20,7 +20,12 @@ void solution_1() {
     cout << endl;
     dog.clearAbilities();
     dog.show_talent();
+    cout << endl;
 
+    cout << endl;
+    dog.addAbility(new Counting());
+    dog.addAbility(new Swimming());
+    dog.show_talent();
     cout << endl;
 
 }
