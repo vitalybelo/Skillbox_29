@@ -29,6 +29,9 @@ void Dog::show_talent() {
 }
 
 Dog::~Dog() {
+//    for (auto & ability : abilities) {
+//        delete ability;
+//    }
     // заменяем содержимое вектора на пустой вектор = обнулили
     std::vector<Talents*>().swap(abilities);
 }
