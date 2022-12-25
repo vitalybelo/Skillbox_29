@@ -5,8 +5,13 @@ Dog::Dog(const std::string &name) {
 }
 
 void Dog::clearAbilities() {
-    if (!abilities.empty()) abilities.clear();
-    if (abilities.capacity() > 0) abilities.shrink_to_fit();
+    if (!abilities.empty())
+    {
+        for (auto &talent: abilities) {
+            delete talent;
+        }
+        abilities.clear();
+    }
 }
 
 bool Dog::addAbility(Talents* ability) {
@@ -29,11 +34,10 @@ void Dog::show_talent() {
 }
 
 Dog::~Dog() {
-//    for (auto & ability : abilities) {
-//        delete ability;
-//    }
+    clearAbilities();
+    std::cout << "DESTROYED" << std::endl;
     // заменяем содержимое вектора на пустой вектор = обнулили
-    std::vector<Talents*>().swap(abilities);
+    //std::vector<Talents*>().swap(abilities);
 }
 
 
