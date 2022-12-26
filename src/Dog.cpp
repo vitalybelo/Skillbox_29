@@ -7,7 +7,7 @@ Dog::Dog(const std::string &name) {
 void Dog::clearAbilities() {
     if (!abilities.empty())
     {
-        for (auto &talent: abilities) {
+        for (auto talent: abilities) {
             delete talent;
         }
         abilities.clear();
@@ -35,7 +35,7 @@ void Dog::show_talent() {
 
 Dog::~Dog() {
     clearAbilities();
-    std::cout << "DESTROYED" << std::endl;
+    std::cout << "DOG DESTROYED" << std::endl;
     // заменяем содержимое вектора на пустой вектор = обнулили
     //std::vector<Talents*>().swap(abilities);
 }
