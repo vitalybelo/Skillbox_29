@@ -36,8 +36,6 @@ void Dog::show_talent() {
 Dog::~Dog() {
     clearAbilities();
     std::cout << "DOG DESTROYED" << std::endl;
-    // заменяем содержимое вектора на пустой вектор = обнулили
-    //std::vector<Talents*>().swap(abilities);
 }
 
 
